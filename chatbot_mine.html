@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Finder Chatbot</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-6 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-4 text-center">Hospital Finder Chatbot</h1>
+        <div id="chat-container" class="h-96 overflow-y-auto bg-gray-50 p-4 rounded-md mb-4">
+            <div id="chat-messages"></div>
+        </div>
+        <div id="input-container" class="space-y-2">
+            <select id="chat-input" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 hidden">
+                <!-- Options populated dynamically -->
+            </select>
+            <input type="text" id="text-input" class="w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Type your response...">
+            <button id="send-button" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Send</button>
+        </div>
+    </div>
+
+    <script>
+        const chatMessages = document.getElementById('chat-messages');
+        const chatInput = document.getElementById('chat-input');
+        const textInput = document.getElementById('text-input');
+        const sendButton = document.getElementById('send-button');
+
+        const regions = ['Dar es Salaam', 'Arusha', 'Mwanza'];
+        const districtsByRegion = {
+            'Dar es Salaam': ['Temeke', 'Kinondoni', 'Ilala'],
+            'Arusha': ['Arusha Urban', 'Arumeru', 'Longido'],
+            'Mwanza': ['Nyamagana', 'Ilemela', 'Magu']
+        };
+        const streetsByDistrict = {
+            'Temeke': ['Mtaa wa Amani', 'Buhongwa Road', 'Nyerere Street', 'Mtaa wa Upendo', 'Azikiwe Street', 'Mtaa wa Baraka', 'Meru Road', 'Njiro Road', 'Kaloleni Street', 'Kijitonyama Road'],
+            'Kinondoni': ['Jamhuri Avenue', 'Nyamagana Road', 'Mlimani Avenue', 'Mtaa wa Baraka', 'Mtaa wa Upendo', 'Nyerere Street', 'Buhongwa Road', 'Kijitonyama Road', 'Meru Road', 'Mtaa wa Walinzi', 'Bismarck Street'],
+            'Ilala': ['Bismarck Street', 'Nyerere Street', 'Kaloleni Street', 'Mlimani Avenue', 'Meru Road', 'Jamhuri Avenue', 'Azikiwe Street', 'Njiro Road', 'Mtaa wa Amani', 'Mtaa wa Walinzi', 'Kijitonyama Road', 'Mtaa wa Baraka'],
+            'Arusha Urban': ['Mtaa wa Amani', 'Azikiwe Street', 'Nyamagana Road', 'Bismarck Street', 'Mlimani Avenue', 'Buhongwa Road', 'Meru Road', 'Njiro Road', 'Mtaa wa Walinzi', 'Jamhuri Avenue', 'Mtaa wa Baraka'],
+            'Arumeru': ['Kaloleni Street', 'Nyerere Street', 'Meru Road', 'Mtaa wa Walinzi', 'Buhongwa Road', 'Njiro Road', 'Azikiwe Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Jamhuri Avenue', 'Bismarck Street', 'Mtaa wa Baraka'],
+            'Longido': ['Mlimani Avenue', 'Nyerere Street', 'Njiro Road', 'Mtaa wa Walinzi', 'Bismarck Street', 'Meru Road', 'Azikiwe Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Kaloleni Street', 'Mtaa wa Amani'],
+            'Nyamagana': ['Mtaa wa Amani', 'Nyerere Street', 'Buhongwa Road', 'Azikiwe Street', 'Jamhuri Avenue', 'Kaloleni Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Mtaa wa Baraka', 'Njiro Road', 'Mlimani Avenue'],
+            'Ilemela': ['Kaloleni Street', 'Jamhuri Avenue', 'Mtaa wa Baraka', 'Nyerere Street', 'Buhongwa Road', 'Azikiwe Street', 'Mtaa wa Upendo', 'Meru Road', 'Mlimani Avenue', 'Bismarck Street', 'Njiro Road'],
+            'Magu': ['Buhongwa Road', 'Nyerere Street', 'Kijitonyama Road', 'Mtaa wa Walinzi', 'Azikiwe Street', 'Mlimani Avenue', 'Bismarck Street', 'Kaloleni Street', 'Mtaa wa Amani', 'Jamhuri Avenue', 'Njiro Road', 'Mtaa wa Baraka', 'Mtaa wa Upendo']
+        };
+
+        let conversationState = {
+            step: 'welcome',
+            region: null,
+            district: null,
+            street: null,
+            phone: null
+        };
+
+        function addMessage(content, isBot = true) {
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `p-2 rounded-lg mb-2 ${isBot ? 'bg-indigo-100 text-indigo-800' : 'bg-gray-200 text-gray-800 ml-auto'}`;
+            messageDiv.textContent = content;
+            chatMessages.appendChild(messageDiv);
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+        }
+
+        function populateDropdown(options, placeholder) {
+            chatInput.innerHTML = `<option value="">${placeholder}</option>`;
+            options.forEach(option => {
+                const opt = document.createElement('option');
+                opt.value = option;
+                opt.textContent = option;
+                chatInput.appendChild(opt);
+            });
+            chatInput.classList.remove('hidden');
+            textInput.classList.add('hidden');
+        }
+
+        function showTextInput() {
+            chatInput.classList.add('hidden');
+            textInput.classList.remove('hidden');
+            textInput.focus();
+        }
+
+        function handleInput() {
+            let userInput = textInput.value.trim() || chatInput.value;
+            if (!userInput) return;
+
+            if (conversationState.step !== 'welcome') {
+                addMessage(userInput, false);
+            }
+
+            switch (conversationState.step) {
+                case 'welcome':
+                    addMessage('Welcome to the Hospital Finder! I can help you find the nearest hospital. Type "start" to begin.');
+                    conversationState.step = 'start';
+                    showTextInput();
+                    break;
+
+                case 'start':
+                    if (userInput.toLowerCase() === 'start') {
+                        addMessage('Please select your region:');
+                        populateDropdown(regions, 'Select Region');
+                        conversationState.step = 'region';
+                    } else {
+                        addMessage('Please type "start" to begin.');
+                    }
+                    break;
+
+                case 'region':
+                    if (regions.includes(userInput)) {
+                        conversationState.region = userInput;
+                        addMessage(`You selected ${userInput}. Now, please select your district:`);
+                        populateDropdown(districtsByRegion[userInput], 'Select District');
+                        conversationState.step = 'district';
+                    } else {
+                        addMessage('Invalid region. Please select a valid region.');
+                    }
+                    break;
+
+                case 'district':
+                    if (districtsByRegion[conversationState.region].includes(userInput)) {
+                        conversationState.district = userInput;
+                        addMessage(`You selected ${userInput}. Now, please select your street:`);
+                        populateDropdown(streetsByDistrict[userInput], 'Select Street');
+                        conversationState.step = 'street';
+                    } else {
+                        addMessage('Invalid district. Please select a valid district.');
+                    }
+                    break;
+
+                case 'street':
+                    if (streetsByDistrict[conversationState.district].includes(userInput)) {
+                        conversationState.street = userInput;
+                        addMessage(`You selected ${userInput}. Please enter your phone number (e.g., +255712345678):`);
+                        showTextInput();
+                        conversationState.step = 'phone';
+                    } else {
+                        addMessage('Invalid street. Please select a valid street.');
+                    }
+                    break;
+
+                case 'phone':
+                    const phonePattern = /^\+255[67]\d{8}$/;
+                    if (phonePattern.test(userInput)) {
+                        conversationState.phone = userInput;
+                        addMessage('Thank you! Finding the nearest hospital...');
+                        sendPredictionRequest();
+                    } else {
+                        addMessage('Invalid phone number. Please use format +255 followed by 9 digits (e.g., +255712345678).');
+                    }
+                    break;
+            }
+
+            textInput.value = '';
+            chatInput.selectedIndex = 0;
+        }
+
+        async function sendPredictionRequest() {
+            try {
+                const response = await fetch('/find_hospital', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        region: conversationState.region,
+                        district: conversationState.district,
+                        street: conversationState.street,
+                        phone: conversationState.phone
+                    })
+                });
+                const result = await response.json();
+                if (result.success) {
+                    addMessage(`Nearest Hospital: ${result.hospital_name}\nLocation: ${result.street}, ${result.district}, ${result.region}\nDistance: ${result.distance.toFixed(2)} km\nSMS sent to ${conversationState.phone}`);
+                    conversationState = { step: 'welcome', region: null, district: null, street: null, phone: null };
+                    showTextInput();
+                } else {
+                    addMessage(`Error: ${result.error}`);
+                    conversationState.step = 'welcome';
+                    showTextInput();
+                }
+            } catch (error) {
+                addMessage(`Error: ${error.message}`);
+                conversationState.step = 'welcome';
+                showTextInput();
+            }
+        }
+
+        sendButton.addEventListener('click', handleInput);
+        textInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') handleInput();
+        });
+
+        // Initialize conversation
+        addMessage('Welcome to the Hospital Finder! I can help you find the nearest hospital. Type "start" to begin.');
+    </script>
+</body>
+</html>

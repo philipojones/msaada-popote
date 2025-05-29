@@ -1,0 +1,123 @@
+2025-05-29 12:36:08,512 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-29 12:36:09,980 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-29 12:36:09,981 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 12:43:15,881 - __main__ - ERROR - SMS processing failed: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-29 12:43:17,241 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_f30746de9f0c74995d6909a0dce35d94', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:43:17,245 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:43:17] "[35m[1mPOST /sms HTTP/1.1[0m" 500 -
+2025-05-29 12:44:19,091 - __main__ - ERROR - SMS processing failed: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-29 12:44:20,025 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_e4770a5e6513ffc93b1cff72c26fbc04', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:44:20,027 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:44:20] "[35m[1mPOST /sms HTTP/1.1[0m" 500 -
+2025-05-29 12:45:21,669 - __main__ - ERROR - SMS processing failed: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-29 12:45:22,838 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_e78088804738759940a7d78712795541', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:45:22,840 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:45:22] "[35m[1mPOST /sms HTTP/1.1[0m" 500 -
+2025-05-29 12:46:24,707 - __main__ - ERROR - SMS processing failed: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-29 12:46:26,126 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_bbdd9d9d29c90bf40748e72fb452390e', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:46:26,128 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:46:26] "[35m[1mPOST /sms HTTP/1.1[0m" 500 -
+2025-05-29 12:47:27,190 - __main__ - ERROR - SMS processing failed: 400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+2025-05-29 12:47:28,394 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_861bb433adf02a656e8b8a6abd77281d', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:47:28,398 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:47:28] "[35m[1mPOST /sms HTTP/1.1[0m" 500 -
+2025-05-29 12:48:28,089 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 12:48:28,270 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 12:48:28,270 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 12:48:28,307 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 12:48:34,096 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 12:48:34,143 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 12:48:34,157 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 12:50:30,129 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_2a1594476056011c3bf10b9e25be0037', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 12:50:30,133 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 12:50:30] "POST /sms HTTP/1.1" 200 -
+2025-05-29 13:36:16,128 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:36:16,288 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 13:36:16,288 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 13:36:16,309 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 13:36:18,797 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:36:18,817 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 13:36:18,820 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 13:52:30,475 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:52:30,545 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-05-29 13:52:30,546 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 13:52:30,572 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 13:52:36,298 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:52:36,346 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 13:52:36,355 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 13:54:10,608 - werkzeug - INFO -  * Detected change in 'C:\\Python313\\Lib\\netrc.py', reloading
+2025-05-29 13:54:11,410 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 13:54:17,640 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:54:17,692 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 13:54:17,699 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 13:54:49,254 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 13:54:49,255 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 13:54:50,119 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 13:54:55,583 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 13:54:55,626 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 13:54:55,632 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 13:55:13,411 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_fddaab02f0bcc3eb4edb4d142868e233', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 13:55:13,414 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 13:55:13] "POST /sms HTTP/1.1" 200 -
+2025-05-29 13:55:18,768 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_5344607f1f969018d11c29404e0d1f30', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 13:55:18,770 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 13:55:18] "POST /sms HTTP/1.1" 200 -
+2025-05-29 13:55:33,541 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_e873a3d6ae8cab518e7076524393c4a9', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 13:55:33,543 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 13:55:33] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:06:01,738 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:06:01,741 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:06:02,780 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 14:06:06,946 - __main__ - ERROR - Missing required Africa's Talking credentials in .env file!
+2025-05-29 14:07:23,409 - __main__ - INFO - Africa's Talking initialized with shortcode: 44278
+2025-05-29 14:07:27,535 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 14:07:27,538 - __main__ - INFO - Starting SMS chatbot service with shortcode 44278
+2025-05-29 14:07:29,065 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-29 14:07:29,066 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 14:07:29,110 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 14:07:33,555 - __main__ - INFO - Africa's Talking initialized with shortcode: 44278
+2025-05-29 14:07:36,727 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 14:07:36,730 - __main__ - INFO - Starting SMS chatbot service with shortcode 44278
+2025-05-29 14:07:36,786 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 14:07:36,796 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 14:07:50,794 - __main__ - ERROR - Failed to send SMS from 44278: SMSService.send() got an unexpected keyword argument 'sender'. Did you mean 'sender_id'?
+2025-05-29 14:07:50,800 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:07:50] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:09:31,059 - __main__ - ERROR - Failed to send SMS from 44278: SMSService.send() got an unexpected keyword argument 'sender'. Did you mean 'sender_id'?
+2025-05-29 14:09:31,060 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:09:31] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:11:44,442 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:11:44,443 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:11:45,622 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 14:11:52,915 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 14:11:52,970 - werkzeug - WARNING -  * Debugger is active!
+2025-05-29 14:11:52,981 - werkzeug - INFO -  * Debugger PIN: 233-555-793
+2025-05-29 14:16:34,633 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:16:34,634 - werkzeug - INFO -  * Detected change in 'E:\\hackafrica\\mine.py', reloading
+2025-05-29 14:16:35,529 - werkzeug - INFO -  * Restarting with watchdog (windowsapi)
+2025-05-29 14:18:14,518 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 14:18:15,971 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-29 14:18:15,971 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 14:18:18,315 - __main__ - ERROR - SMS sending failed: SMSService.send() missing 1 required positional argument: 'recipients'
+2025-05-29 14:18:18,317 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:18:18] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:18:44,795 - __main__ - ERROR - SMS sending failed: SMSService.send() missing 1 required positional argument: 'recipients'
+2025-05-29 14:18:44,796 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:18:44] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:18:58,050 - __main__ - ERROR - SMS sending failed: SMSService.send() missing 1 required positional argument: 'recipients'
+2025-05-29 14:18:58,052 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:18:58] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:26:54,989 - __main__ - ERROR - SMS sending failed: SMSService.send() missing 1 required positional argument: 'recipients'
+2025-05-29 14:26:54,992 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:26:54] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:28:20,346 - __main__ - INFO - Model and data loaded successfully
+2025-05-29 14:28:21,914 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-29 14:28:21,915 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 14:29:35,182 - __main__ - INFO - SMS sent to +255756870373 via 44278. Response: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_9304787af1b6c1e56abefda1a550754f', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 14:29:35,186 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:29:35] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:29:41,351 - __main__ - INFO - SMS sent to +255756870373 via 44278. Response: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_81dd0919a19229d34248cc4fe9ef5e27', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 14:29:41,352 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:29:41] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:29:52,877 - __main__ - INFO - SMS sent to +255756870373 via 44278. Response: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_801f6a4d565651df0ef8833c7a926cab', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 14:29:52,878 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:29:52] "POST /sms HTTP/1.1" 200 -
+2025-05-29 14:30:29,095 - __main__ - INFO - SMS sent to +255756870373 via 44278. Response: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_514bf1e62c3876e363a4460f9d414537', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 14:30:29,098 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:30:29] "POST /sms HTTP/1.1" 200 -

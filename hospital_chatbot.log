@@ -1,0 +1,53 @@
+2025-05-27 12:23:38,315 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 12:23:39,644 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.144:5001
+2025-05-27 12:23:39,645 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 12:27:10,916 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:27:10] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:28:12,056 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:28:12] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:29:13,204 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:29:13] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:30:14,217 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:30:14] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:31:15,445 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:31:15] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:32:16,192 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:32:16] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:33:17,280 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:33:17] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:33:30,406 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 12:33:32,459 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.1.144:5001
+2025-05-27 12:33:32,460 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 12:35:14,255 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:35:14,258 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:35:14] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:35:35,387 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 12:35:35] "[33mGET / HTTP/1.1[0m" 404 -
+2025-05-27 12:35:35,479 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 12:35:35] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-27 12:36:15,797 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:36:15,798 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:36:15] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:37:17,640 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:37:17,642 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:37:17] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:37:43,946 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:37:43,948 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:37:43] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:38:18,781 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:38:18,783 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:38:18] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:38:45,100 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:38:45,102 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:38:45] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:39:20,933 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:39:20,935 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:39:20] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:39:46,265 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:39:46,267 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:39:46] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:40:22,082 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:40:22,083 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:40:22] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:40:47,677 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:40:47,680 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:40:47] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:41:23,306 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:41:23,308 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:41:23] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:41:48,607 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:41:48,609 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:41:48] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:42:24,409 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:42:24,410 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:42:24] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:42:49,652 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:42:49,653 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:42:49] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:43:25,873 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:43:25,875 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:43:25] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -
+2025-05-27 12:43:50,876 - __main__ - ERROR - Chatbot error: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:43:50,877 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:43:50] "[35m[1mPOST /chatbot HTTP/1.1[0m" 500 -

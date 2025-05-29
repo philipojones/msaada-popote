@@ -1,0 +1,100 @@
+2025-05-27 10:33:36,413 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 10:33:38,119 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-27 10:33:38,121 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 10:34:21,794 - web_hospital_backend - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\hackafrica\web_hospital_backend.py", line 124, in index
+    with open('web_hospital.html', 'r') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'web_hospital.html'
+2025-05-27 10:34:21,859 - werkzeug - INFO - 10.2.0.2 - - [27/May/2025 10:34:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-27 10:34:21,927 - werkzeug - INFO - 10.2.0.2 - - [27/May/2025 10:34:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-27 10:35:59,297 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 10:36:01,189 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-27 10:36:01,190 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 10:36:08,221 - werkzeug - INFO - 10.2.0.2 - - [27/May/2025 10:36:08] "GET / HTTP/1.1" 200 -
+2025-05-27 10:37:06,319 - __main__ - ERROR - SMS sending failed to +255693824661: HTTPSConnectionPool(host='api.sandbox.africastalking.com', port=443): Max retries exceeded with url: /version1/messaging (Caused by NameResolutionError("<urllib3.connection.HTTPSConnection object at 0x0000026F9A7FA3C0>: Failed to resolve 'api.sandbox.africastalking.com' ([Errno 11002] getaddrinfo failed)"))
+2025-05-27 10:37:06,324 - werkzeug - INFO - 10.2.0.2 - - [27/May/2025 10:37:06] "POST /find_hospital HTTP/1.1" 200 -
+2025-05-27 10:40:21,784 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 10:40:23,255 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-27 10:40:23,257 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 10:40:26,546 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 10:40:26] "GET / HTTP/1.1" 200 -
+2025-05-27 10:40:32,269 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 10:40:32] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-27 10:40:47,743 - __main__ - INFO - SMS sent to +255693824661: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_b5d43eceeb229063d597588dd7c18ee8', 'number': '+255693824661', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-27 10:40:47,745 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 10:40:47] "POST /find_hospital HTTP/1.1" 200 -
+2025-05-27 11:22:47,214 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 11:22:47,260 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-05-27 11:22:47,260 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 11:29:00,315 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:29:00] "GET / HTTP/1.1" 200 -
+2025-05-27 11:29:20,182 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:29:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-05-27 11:29:45,802 - __main__ - INFO - SMS sent to +255693824661: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 35.0000 Message parts: 1', 'Recipients': [{'cost': 'TZS 35.0000', 'messageId': 'ATXid_374f68c0f039487afad80f84990be22b', 'number': '+255693824661', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-27 11:29:45,803 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:29:45] "POST /find_hospital HTTP/1.1" 200 -
+2025-05-27 11:46:37,296 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 11:46:38,677 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-05-27 11:46:38,678 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 11:46:43,887 - web_hospital_backend - ERROR - Exception on / [GET]
+Traceback (most recent call last):
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\phili\AppData\Roaming\Python\Python313\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "E:\hackafrica\web_hospital_backend.py", line 142, in index
+    with open('index.html', 'r') as f:
+         ~~~~^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'index.html'
+2025-05-27 11:46:43,918 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:46:43] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-27 11:49:35,974 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 11:49:37,503 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-05-27 11:49:37,504 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 11:49:43,773 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:49:43] "GET / HTTP/1.1" 200 -
+2025-05-27 11:50:05,898 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:50:05] "GET /chatbot HTTP/1.1" 200 -
+2025-05-27 11:51:36,440 - __main__ - INFO - SMS sent to +255693824661: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 70.0000 Message parts: 2', 'Recipients': [{'cost': 'TZS 70.0000', 'messageId': 'ATXid_201cbb4d6c40a5eeea9b950a26f52307', 'number': '+255693824661', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-27 11:51:36,441 - werkzeug - INFO - 192.168.1.144 - - [27/May/2025 11:51:36] "POST /find_hospital HTTP/1.1" 200 -
+2025-05-27 12:14:14,084 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:14:14] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:15:15,440 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:15:15] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:16:16,474 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:16:16] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:17:07,476 - __main__ - ERROR - Web prediction failed: 415 Unsupported Media Type: Did not attempt to load JSON data because the request Content-Type was not 'application/json'.
+2025-05-27 12:17:07,478 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:17:07] "POST /find_hospital HTTP/1.1" 200 -
+2025-05-27 12:17:17,583 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:17:17] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:18:19,026 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:18:19] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:19:21,234 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:19:21] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 12:20:22,223 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 12:20:22] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -
+2025-05-27 13:25:08,395 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 13:25:09,744 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.144:5000
+2025-05-27 13:25:09,745 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 13:25:26,082 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 13:25:26] "[31m[1mPOST /chatbot HTTP/1.1[0m" 405 -

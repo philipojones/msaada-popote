@@ -1,0 +1,42 @@
+2025-05-27 10:55:18,642 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-27 10:55:18,669 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.100.12:5000
+2025-05-27 10:55:18,670 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-27 11:19:38,955 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 11:19:38] "POST /ussd HTTP/1.1" 200 -
+2025-05-27 11:19:43,767 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 11:19:43] "POST /ussd HTTP/1.1" 200 -
+2025-05-27 11:19:47,972 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 11:19:47] "POST /ussd HTTP/1.1" 200 -
+2025-05-27 11:19:51,186 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 11:19:51] "POST /ussd HTTP/1.1" 200 -
+2025-05-27 11:19:57,719 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 70.0000 Message parts: 2', 'Recipients': [{'cost': 'TZS 70.0000', 'messageId': 'ATXid_8b0135102a455d0ee7a11325e7f9517e', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-27 11:19:57,721 - werkzeug - INFO - 127.0.0.1 - - [27/May/2025 11:19:57] "POST /ussd HTTP/1.1" 200 -
+2025-05-28 22:58:04,798 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-28 22:58:06,413 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-28 22:58:06,414 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-28 23:00:54,509 - __main__ - INFO - Session : Phone=, Input=hi, Step=welcome
+2025-05-28 23:00:54,510 - __main__ - INFO - Session : Response=CON Karibu! Tafuta hospitali ya karibu:
+1. Tafuta Hospitali
+2. Kuhusu Huduma
+3. Msaada
+2025-05-28 23:00:54,511 - werkzeug - INFO - 127.0.0.1 - - [28/May/2025 23:00:54] "POST /ussd HTTP/1.1" 200 -
+2025-05-28 23:02:03,864 - __main__ - INFO - Session : Phone=, Input=hi, Step=welcome
+2025-05-28 23:02:03,865 - __main__ - INFO - Session : Response=CON Karibu! Tafuta hospitali ya karibu:
+1. Tafuta Hospitali
+2. Kuhusu Huduma
+3. Msaada
+2025-05-28 23:02:03,866 - werkzeug - INFO - 127.0.0.1 - - [28/May/2025 23:02:03] "POST /ussd HTTP/1.1" 200 -
+2025-05-29 14:34:45,590 - __main__ - INFO - Model, encoders, and dataset loaded successfully
+2025-05-29 14:34:47,209 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.2.0.2:5000
+2025-05-29 14:34:47,211 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-05-29 14:38:32,910 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:38:32] "POST /ussd HTTP/1.1" 200 -
+2025-05-29 14:38:37,752 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:38:37] "POST /ussd HTTP/1.1" 200 -
+2025-05-29 14:38:40,922 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:38:40] "POST /ussd HTTP/1.1" 200 -
+2025-05-29 14:38:44,896 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:38:44] "POST /ussd HTTP/1.1" 200 -
+2025-05-29 14:38:52,464 - __main__ - INFO - SMS sent to +255756870373: {'SMSMessageData': {'Message': 'Sent to 1/1 Total Cost: TZS 70.0000 Message parts: 2', 'Recipients': [{'cost': 'TZS 70.0000', 'messageId': 'ATXid_ecc2b00a9f3b9993ae760746c92811b6', 'number': '+255756870373', 'status': 'Success', 'statusCode': 101}]}}
+2025-05-29 14:38:52,466 - werkzeug - INFO - 127.0.0.1 - - [29/May/2025 14:38:52] "POST /ussd HTTP/1.1" 200 -

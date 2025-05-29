@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Nearest Hospital</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-center">Find Nearest Hospital</h1>
+        <div class="space-y-4">
+            <div>
+                <label for="region" class="block text-sm font-medium text-gray-700">Region</label>
+                <select id="region" name="region" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                    <option value="Dar es Salaam">Dar es Salaam</option>
+                    <option value="Arusha">Arusha</option>
+                    <option value="Mwanza">Mwanza</option>
+                </select>
+            </div>
+            <div>
+                <label for="district" class="block text-sm font-medium text-gray-700">District</label>
+                <select id="district" name="district" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+            <div>
+                <label for="street" class="block text-sm font-medium text-gray-700">Street</label>
+                <select id="street" name="street" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" required>
+                    <!-- Populated dynamically -->
+                </select>
+            </div>
+            <div>
+                <label for="phone" class="block text-sm font-medium text-gray-700">Phone Number</label>
+                <input type="tel" id="phone" name="phone" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="+255123456789" required>
+            </div>
+            <button id="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50">Find Hospital</button>
+        </div>
+        <div id="result" class="mt-4 text-center"></div>
+    </div>
+
+    <script>
+        const regions = ['Dar es Salaam', 'Arusha', 'Mwanza'];
+        const districtsByRegion = {
+            'Dar es Salaam': ['Temeke', 'Kinondoni', 'Ilala'],
+            'Arusha': ['Arusha Urban', 'Arumeru', 'Longido'],
+            'Mwanza': ['Nyamagana', 'Ilemela', 'Magu']
+        };
+        const streetsByDistrict = {
+            'Temeke': ['Mtaa wa Amani', 'Buhongwa Road', 'Nyerere Street', 'Mtaa wa Upendo', 'Azikiwe Street', 'Mtaa wa Baraka', 'Meru Road', 'Njiro Road', 'Kaloleni Street', 'Kijitonyama Road'],
+            'Kinondoni': ['Jamhuri Avenue', 'Nyamagana Road', 'Mlimani Avenue', 'Mtaa wa Baraka', 'Mtaa wa Upendo', 'Nyerere Street', 'Buhongwa Road', 'Kijitonyama Road', 'Meru Road', 'Mtaa wa Walinzi', 'Bismarck Street'],
+            'Ilala': ['Bismarck Street', 'Nyerere Street', 'Kaloleni Street', 'Mlimani Avenue', 'Meru Road', 'Jamhuri Avenue', 'Azikiwe Street', 'Njiro Road', 'Mtaa wa Amani', 'Mtaa wa Walinzi', 'Kijitonyama Road', 'Mtaa wa Baraka'],
+            'Arusha Urban': ['Mtaa wa Amani', 'Azikiwe Street', 'Nyamagana Road', 'Bismarck Street', 'Mlimani Avenue', 'Buhongwa Road', 'Meru Road', 'Njiro Road', 'Mtaa wa Walinzi', 'Jamhuri Avenue', 'Mtaa wa Baraka'],
+            'Arumeru': ['Kaloleni Street', 'Nyerere Street', 'Meru Road', 'Mtaa wa Walinzi', 'Buhongwa Road', 'Njiro Road', 'Azikiwe Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Jamhuri Avenue', 'Bismarck Street', 'Mtaa wa Baraka'],
+            'Longido': ['Mlimani Avenue', 'Nyerere Street', 'Njiro Road', 'Mtaa wa Walinzi', 'Bismarck Street', 'Meru Road', 'Azikiwe Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Kaloleni Street', 'Mtaa wa Amani'],
+            'Nyamagana': ['Mtaa wa Amani', 'Nyerere Street', 'Buhongwa Road', 'Azikiwe Street', 'Jamhuri Avenue', 'Kaloleni Street', 'Kijitonyama Road', 'Mtaa wa Upendo', 'Mtaa wa Baraka', 'Njiro Road', 'Mlimani Avenue'],
+            'Ilemela': ['Kaloleni Street', 'Jamhuri Avenue', 'Mtaa wa Baraka', 'Nyerere Street', 'Buhongwa Road', 'Azikiwe Street', 'Mtaa wa Upendo', 'Meru Road', 'Mlimani Avenue', 'Bismarck Street', 'Njiro Road'],
+            'Magu': ['Buhongwa Road', 'Nyerere Street', 'Kijitonyama Road', 'Mtaa wa Walinzi', 'Azikiwe Street', 'Mlimani Avenue', 'Bismarck Street', 'Kaloleni Street', 'Mtaa wa Amani', 'Jamhuri Avenue', 'Njiro Road', 'Mtaa wa Baraka', 'Mtaa wa Upendo']
+        };
+
+        const regionSelect = document.getElementById('region');
+        const districtSelect = document.getElementById('district');
+        const streetSelect = document.getElementById('street');
+        const submitButton = document.getElementById('submit');
+        const resultDiv = document.getElementById('result');
+
+        regionSelect.addEventListener('change', () => {
+            const region = regionSelect.value;
+            districtSelect.innerHTML = '<option value="">Select District</option>';
+            districtsByRegion[region].forEach(district => {
+                const option = document.createElement('option');
+                option.value = district;
+                option.textContent = district;
+                districtSelect.appendChild(option);
+            });
+            streetSelect.innerHTML = '<option value="">Select Street</option>';
+        });
+
+        districtSelect.addEventListener('change', () => {
+            const district = districtSelect.value;
+            streetSelect.innerHTML = '<option value="">Select Street</option>';
+            if (district) {
+                streetsByDistrict[district].forEach(street => {
+                    const option = document.createElement('option');
+                    option.value = street;
+                    option.textContent = street;
+                    streetSelect.appendChild(option);
+                });
+            }
+        });
+
+        submitButton.addEventListener('click', async () => {
+            const region = regionSelect.value;
+            const district = districtSelect.value;
+            const street = streetSelect.value;
+            const phone = document.getElementById('phone').value;
+
+            if (!region || !district || !street || !phone) {
+                resultDiv.innerHTML = '<p class="text-red-500">Please fill all fields.</p>';
+                return;
+            }
+
+            resultDiv.innerHTML = '<p class="text-gray-500">Processing...</p>';
+            try {
+                const response = await fetch('/find_hospital', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ region, district, street, phone })
+                });
+                const result = await response.json();
+                if (result.success) {
+                    resultDiv.innerHTML = `<p class="text-green-500">SMS sent with nearest hospital: ${result.hospital_name}</p>`;
+                } else {
+                    resultDiv.innerHTML = `<p class="text-red-500">Error: ${result.error}</p>`;
+                }
+            } catch (error) {
+                resultDiv.innerHTML = `<p class="text-red-500">Error: ${error.message}</p>`;
+            }
+        });
+    </script>
+</body>
+</html>
